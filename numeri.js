@@ -1,6 +1,6 @@
-const numeri = process.argv.slice(2).map(Number);
-let numeroMaggiore = Math.max(...numeri);
-console.log(`il numero più grande è ${numeroMaggiore}`);
+// const numeri = process.argv.slice(2).map(Number);
+// let numeroMaggiore = Math.max(...numeri);
+// console.log(`il numero più grande è ${numeroMaggiore}`);
 
 // const numeri = [3, 5, 56, 6, 19, 29, 22, 45, 75, 95, 102, 199];
 
@@ -35,3 +35,57 @@ console.log(`il numero più grande è ${numeroMaggiore}`);
 //   });
 //   return biggestNumber;
 // };
+import prompt from "prompt";
+const numeri = [];
+let biggestNumber = 0;
+
+setValues();
+
+function setValues() {
+  prompt.get(["num"], function (err, res) {
+    if (parseInt(res.num) != res.num) {
+      console.log(numeri);
+      console.log(numeromaggiore());
+    } else {
+      const value = parseInt(res.num);
+      console.log(value);
+
+      numeri.push(value);
+      setValues();
+    }
+  });
+}
+
+function numeromaggiore() {
+  numeri.forEach((number) => {
+    if (number > biggestNumber) {
+      biggestNumber = number;
+    }
+  });
+
+  return biggestNumber;
+}
+
+// function numeromaggiore() {
+//   console.log("inserisci i numeri, premi invio per il numero maggiore");
+//   prompt.start;
+
+//   //prendo un numero tramite prompt
+//   for (let index = 0; index < 5; index++) {
+//     prompt.get(["num"], function (err, res) {
+//       if (!isNaN(res.num)) {
+//         console.log(numeri);
+
+//         numeri.forEach((number) => {
+//           if (number > biggestNumber) {
+//             biggestNumber = number;
+//           }
+//         });
+//         return biggestNumber;
+//       } else {
+//         numeri.push(parseInt(res.num));
+//         // console.log(numeri);
+//       }
+//     });
+//   }
+// }
