@@ -1,4 +1,5 @@
 const vocali = ["a", "e", "i", "o", "u"];
+let string = process.argv[2];
 
 function contaVocali(string) {
   let count = 0;
@@ -7,7 +8,7 @@ function contaVocali(string) {
       count++;
     }
   }
-  return count;
+  return `Il numero di vocali è ${count} `;
 }
 
-export { contaVocali };
+console.log(contaVocali(string));

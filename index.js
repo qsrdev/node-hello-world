@@ -1,6 +1,9 @@
 import { contaVocali } from "./functions.js";
 
-let stampaParola = process.argv[2];
+let stampaParola = process.argv[3];
 // console.log(stampaParola);
-
-console.log(contaVocali(stampaParola));
+if (process.argv[2] === "vocali") {
+  console.log(contaVocali(stampaParola));
+} else {
+  console.log(contaNumeri);
+}
